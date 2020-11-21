@@ -1,5 +1,5 @@
 .product-card {
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -11,17 +11,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 1s, border 0s;
+    border: 3px solid transparent;
+    margin: 0 2px;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 3px solid $border-color;
+      cursor: pointer;
+    }
   }
 
   &__image {
     width: 160px;
     height: 134px;
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   &__description {
     @include normal-text(15px);
-    padding-top: 45px;
+    padding-top: 42px;
     margin-bottom: 5px;
   }
 
