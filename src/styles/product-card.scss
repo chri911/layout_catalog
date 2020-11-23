@@ -1,16 +1,14 @@
 .product-card {
   border: 1px solid $border-color;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: space-between;
   padding: 15px 14px;
   height: 403px;
 
   &__img {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
     transition: transform 1s, border 0s;
     border: 3px solid transparent;
     margin: 0 2px;
@@ -40,7 +38,8 @@
   }
 
   &__rate {
-    @include flex-center-space-between();
+    @include grid-center-space-between();
+    grid-template-columns: repeat(2, auto);
     margin-bottom: 20px;
     @include small-text;
   }

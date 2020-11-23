@@ -1,7 +1,15 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
+  grid-template-columns: repeat(4, auto);
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, auto);
+  }
 
   &__card {
     width: 200px;

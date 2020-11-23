@@ -24,8 +24,8 @@ $border-color: #f3f3f3;
   line-height: 19px;
 }
 
-@mixin flex-center-space-between {
-  display: flex;
+@mixin grid-center-space-between {
+  display: grid;
   align-items: center;
   justify-content: space-between;
 }
