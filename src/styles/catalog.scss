@@ -2,17 +2,21 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, auto);
+  gap: $gapY $gapX;
 
-  @media (max-width: 1000px) {
+  @media (max-width: ($cardWidth+$gapX)*4) {
     grid-template-columns: repeat(3, auto);
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: ($cardWidth+$gapX)*3) {
     grid-template-columns: repeat(2, auto);
   }
 
+  @media (max-width: ($cardWidth+$gapX)*2) {
+    grid-template-columns: auto;
+  }
+
   &__card {
-    width: 200px;
-    margin: 0 24px 50px;
+    width: $cardWidth;
   }
 }
